@@ -1,0 +1,386 @@
+ body {
+            margin: 0;
+            padding: 0;
+            background-color: bisque;
+        }
+* {
+            box-sizing: border-box;
+        }
+#layout {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            justify-content-center;
+        }
+@media (max-width:640px){
+            #layout {
+                flex-basis: 100%;
+            }
+        }
+@media (max-width: 800px){
+            #header, .logo, #title {
+                flex-basis: 100%;
+            }
+        }
+@media (max-width: 800px){
+            #header, .logo, #title {
+                flex-direction: column;;
+            }
+        }
+@media (max-width: 800px) {
+        .container {
+            flex-direction: column;
+            }
+        }
+@media (max-width: 800px) {
+            .list1, .list2 {
+            flex: 100%;
+            }
+        }
+#header{
+            flex-basis: 100%;
+            border: 1px solid black;
+            width: 100%;
+            height: 15%;
+            background-color:rgb(132, 173, 105);
+            background: radial-gradient(circle, rgba(132,173,105,1) 0%, rgba(243,192,119,1) 100%);
+            text-shadow: 2px 2px 5px green;
+            color: white;
+            font-size: 40px;
+        }
+.logo{
+            width: 20px;
+            height: 20px; 
+            margin:1px; 
+            border:1px solid rgb(132, 173, 105);
+            box-shadow:0 0 5px rgb(120, 183, 120); 
+            border-radius: 0 50% 0 50%;
+            position: absolute;
+            top: 5%;
+            left: 0;
+            background-position: center center;
+            background-image: url('healthy.jpg');
+            background-size: cover;
+            animation-name: slideMe;
+            animation-duration: 13s;
+            animation-iteration-count: infinite;
+        }
+@keyframes slideMe{
+            0%{
+                top:0;
+                left:0;
+            }
+            25%{
+                top:0;
+                left: 93%;
+            }
+            50% {
+                top:7%;
+                left:93%;
+                transform: rotate(360deg);
+            }
+            75% {
+                top:7%;
+                left:0;
+            }
+            100% {
+                top:0;
+                left:0;
+            }
+        }
+#title {
+            padding: 15px;
+        }
+.question {
+            flex-basis: 100%;
+            text-transform: uppercase; 
+            width= 35%; 
+            color:green; 
+            font-size:25px; 
+            text-align:center;
+            background-color: bisque;
+        }
+        
+a {
+            color:rgb(105, 160, 36);
+            background-color: rgb(240, 234, 196);
+            display: inline-block;
+            padding: 5px 15px;
+            /* text-decoration: none; */
+            border: 0px solid black;
+            transition: background-color 2.2s,
+                        color 5s,
+                        padding 0.8s;
+        }
+a:hover {
+            color: rgb(14, 192, 144);
+            background-color: rgb(181, 220, 101);
+            padding: 10px 20px;
+        }
+a:visited {
+            color:rgb(36, 121, 85);
+        }
+.list1 {
+        flex-basis: 40%;
+        height: 400px;
+        /* padding: 50px; */
+        border: 0px solid black;
+        border-right: 0px solid black;
+        border-bottom: 0px solid black;
+        top: 50%;
+        left: 50%;
+        background-color: bisque;
+        font-size: 20px;
+        padding: 40px;
+        }
+.list2 {
+        position: relative;
+        flex-basis: 60%;
+        height: auto; 
+        border-bottom: 5px solid black;
+        border:1px solid rgb(246, 245, 172); 
+        box-shadow: 10px 10px 15px rgb(163, 164, 150); 
+        border-radius:15px;
+        }
+img {
+            max-width: 100%;
+            height: auto;
+        }
+.space{
+            flex-basis: 100%;
+            height: 60px;
+            background-color: bisque;
+        }
+.stable {
+            flex-basis: 100%;
+            height: 20%;
+            background-color: rgb(243, 203, 153);
+            background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(240,231,125,1) 0%, rgba(238,183,124,1) 54%);
+            border: 0px solid rgb(235, 187, 90);
+            padding: 10px;
+            text-align:center; 
+            text-shadow: 2px 2px 5px orange;
+            color: rgb(227, 150, 58);
+            position: sticky;
+            top: 0px;
+            font-size: 45px;
+            left: 0;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+.balanced {
+            flex-basis: 100%;
+            height: 20%; 
+            text-align:center; 
+            text-shadow: 2px 2px 5px orange; 
+            font-size:20px; 
+            color:rgb(227, 150, 58); 
+            background-color: bisque;
+        }
+.container1{
+            position: relative;
+            flex-basis: 30%;
+            height: auto; 
+            border: 2px solid salmon; 
+            box-shadow: 0 0 5px grey;
+        }
+.container2 {
+            flex-basis: 70%;
+            border: 0px solid black;
+            font-size: 30px; 
+            text-align:justify; 
+            color:rgb(88, 73, 37); 
+            padding: 20px;
+        }
+@media (max-width: 800px) {
+        .container1,.container2 {
+            flex-direction: column;
+            }
+        }
+@media (max-width: 800px) {
+            .container1, .container2 {
+            flex: 100%;
+            }
+        }
+#active1 {
+            flex-basis: 65%;
+            text-align: justify;
+            border: 0px solid black;
+            background-color: bisque;
+            font-size: 30px; 
+            text-align:justify; 
+            color:rgb(88, 73, 37); 
+            padding: 20px;
+        }
+#active2 {
+        position: relative;
+        flex-basis: 35%;
+        height: auto; 
+        border: 0px solid black;
+        }
+@media (max-width: 800px) {
+        #active1, #active2 {
+            flex-direction: column;
+            }
+        }
+@media (max-width: 800px) {
+        #active1, #active2 {
+            flex: 100%;
+            }
+        }
+.sleep1 {
+            flex-basis: 50%;
+            border: 0px solid black;
+            background-color: bisque;
+            font-size: 30px; 
+            text-align:justify; 
+            color:rgb(88, 73, 37); 
+            padding: 20px;
+        }
+.sleep2 {
+        position: relative;
+        flex-basis: 50%;
+        height: auto; 
+        }
+@media (max-width: 800px) {
+        .sleep1, .sleep2 {
+            flex-direction: column;
+            }
+        }
+@media (max-width: 800px) {
+        .sleep1, .sleep2 {
+            flex: 100%;
+            }
+        }
+.square1, .square3, .square5 {
+            position: relative;
+            flex-basis: 50%;
+            height: auto;
+            border: 0px solid black;
+            padding-left: 20%;
+        }
+.square2, .square4, .square6 {
+            position: relative;
+            flex-basis: 50%;
+            height: auto;
+            border: 0px solid black;
+            padding-left: 20%;
+        }
+.square img:hover {
+            opacity: .6;
+            transition: .9s;
+        }
+@media (max-width: 800px) {
+    .square {
+            flex-direction: column;
+            }
+        }
+@media (max-width: 800px) {
+    .square {
+            flex: 100%;
+            }
+        }
+.brandy, .wine, .beer {
+            position: relative;
+            flex-basis: 25%;
+            height: auto;
+            border: 0px solid black;
+            text-align: center;
+            color: rgb(59, 54, 47); 
+        }
+.equal {
+            position: relative;
+            flex-basis: 12.5%;
+            height: auto;
+            text-align: center;
+            font-size:50px; 
+            color: rgb(59, 54, 47); 
+        }
+@media (max-width: 800px) {
+        .brandy, .wine, .beer, .equal {
+            flex-direction: column;
+            }
+        }
+@media (max-width: 800px) {
+        .brandy, .wine, .beer, .equal {
+            flex: 100%;
+            }
+        }
+.smoke {
+            flex-basis: 100%;
+            border: 0px solid black;
+            background-color: bisque;
+            font-size: 30px;  
+            color:rgb(88, 73, 37); 
+            padding: 20px;
+        }
+@media (max-width: 800px) {
+        .smoke {
+            flex-direction: column;
+            }
+        }
+@media (max-width: 800px) {
+        .smoke {
+            flex: 100%;
+            }
+        }
+.age {
+            flex-basis: 100%;
+            height: 100px;
+            background-color: rgb(245, 187, 174);
+            font-size: 30px;
+            color: rgb(62, 59, 55);
+            padding: 20px;
+            border: 1px solid black;
+            text-align: center;
+            margin-left: 80px;
+            margin-right: 80px;
+        }
+.weight1, .height1 {
+            flex-basis: 50%;
+            border: 1px solid black;
+            height: 120px;
+            padding: 20px;
+            font-size: 30px;
+            background-color: rgb(245, 187, 174);
+            color: rgb(62, 59, 55);
+
+        }
+#calculation {
+            flex-basis: 100%;
+            align-items: center;
+            border: 0px solid black;
+            text-align: center;
+        }
+#btn {
+            height: 70px;
+            width: 130px;
+            font-size: 20px;
+            background-color:rgb(151, 227, 207);
+        }
+.conclusion, #interpretation {
+            flex-basis: 100%;
+            text-align: right;
+            color: rgb(62, 59, 55);
+            fonr-size: 30px;
+            text-align: center;
+
+        }
+#valueofbmi, #result {
+            flex-basis: 100%;
+            color: red;
+            font-size: 30px;
+            text-align: center;
+        }
+
+@media (max-width: 800px) {
+        .age, .height1, .weight1, #calculation, .conclusion, #valueofbmi, #interpretation, #result {
+            flex-direction: column;
+            }
+        }
+@media (max-width: 800px) {
+        .age, .height1, .weight1, #calculation, .conclusion, #valueofbmi, #interpretation, #result {
+            flex: 100%;
+            }
+        }
