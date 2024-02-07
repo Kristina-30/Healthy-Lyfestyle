@@ -196,6 +196,7 @@ img {
 @media (max-width: 800px) {
         .container1,.container2 {
             flex-direction: column;
+            text-align: left;
             }
         }
 @media (max-width: 800px) {
@@ -222,6 +223,7 @@ img {
 @media (max-width: 800px) {
         #active1, #active2 {
             flex-direction: column;
+            text-align: left;
             }
         }
 @media (max-width: 800px) {
@@ -246,6 +248,7 @@ img {
 @media (max-width: 800px) {
         .sleep1, .sleep2 {
             flex-direction: column;
+            text-align: left;
             }
         }
 @media (max-width: 800px) {
